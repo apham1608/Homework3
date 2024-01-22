@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Homework 3</title>
+      <link rel="stylesheet" type="text/css" href="my.css">
+</head>
+
+<body>
+
+  <!-- forms started with the idea of sending enclosed data back up to a webiste -->
+  <!-- <form name = "mainFrom" action="http:// mywebsite/action_page"></form> -->
+  <!-- <input type="submit" >  shows a submit button-->
+  <!-- which we may well do in other projects later, but for now, 
+    we want to got to a js function -->
+
+  <form name = "mainFrom" onsubmit="return false"></form>
+    
+    <fieldset id="welcome">
+        <legend>Welcome to Useless Web Site</legend>
+        
+        <!---Ask user if they are new user or existing user -->
+        <input type="submit" value="Click for New User" onclick="clickNew()">
+        <input type="submit" value="Click for Existing User" onclick="clickExist()">
+    </fieldset>
+
+<!--       The <fieldset> tag is used to group related elements in a form. -->
+	<fieldset id="newUser">
+    <!--       The <legend> tag is puts a title on this subset of the form -->
+    <legend>Customer Information</legend>
+    <!--       for= some id connects the lable to to the input box -->
+   <label for="custname"> UserName:</label> 
+    <input name="custname" id="newName" />
+    
+    <label for="password"> Password:</label>
+    <input name="password" id="newPassword" />
+    
+    <br>
+     <label for="city">City:</label>
+    <input name="city" id="city" />
+      
+	<label for="state">State (abbr.):</label>
+    <input name="state" id="state" />
+    
+      <!-- here we submit to a local js file -->
+    <input type="submit" value="Login" onclick="loginNewUser()">
+      <!-- <input type="submit" > -->
+    
+    </fieldset>
+  
+    
+	<fieldset id="existUser">
+    <legend>Existing User</legend>
+        
+    <label for="custname"> UserName:</label> 
+    <input name="custname" id="existName" />
+    
+    <label for="password"> Password:</label>
+    <input name="password" id="existPassword" />
+
+    <input type="submit" value="Login" onclick="loginExistUser()">
+    </fieldset>
+  </form>
+
+<script src="main.js"></script>
+</body>
+</html>
